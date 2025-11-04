@@ -1,16 +1,151 @@
-# React + Vite
+# Netflix Clone Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Netflix clone built with React.js and Vite, featuring user authentication, movie browsing, and video playback capabilities.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Business Problem](#business-problem)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Key Features](#key-features)
+- [Research Questions and Key Findings](#research-questions-and-key-findings)
+- [Screenshots](#screenshots)
+- [How to Run the Project](#how-to-run-the-project)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## React Compiler
+This Netflix clone is a full-stack web application that replicates the core functionality of Netflix. Users can browse movies, view details, and watch trailers. The application features user authentication, responsive design, and integration with external APIs for movie data.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Business Problem
 
-## Expanding the ESLint configuration
+The entertainment industry requires scalable, user-friendly streaming platforms. This project addresses the need for:
+- A responsive interface that works across all device sizes
+- Secure user authentication and account management
+- Efficient content browsing and discovery
+- Seamless video playback experience
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+### Frontend
+- **React 19** - JavaScript library for building user interfaces
+- **Vite** - Next-generation frontend tooling (using rolldown for performance)
+- **React Router v7** - Declarative routing for React applications
+- **Bootstrap 5** - CSS framework for responsive design
+- **React Bootstrap** - Bootstrap components built with React
+
+### Backend & Services
+- **Firebase** - Authentication and database services
+- **The Movie Database (TMDb) API** - Movie data and trailers
+- **React Firebase Hooks** - Easy integration with Firebase services
+
+### Development Tools
+- **ESLint** - Code linting and quality assurance
+- **react-toastify** - Notification system
+
+## Project Structure
+
+```
+src/
+├── assets/                 # Images, icons, and static assets
+│   └── cards/
+├── components/             # Reusable UI components
+│   ├── Footer/
+│   ├── Navbar/
+│   └── TitleCards/
+├── pages/                  # Main application pages
+│   ├── Home/
+│   ├── Login/
+│   └── Player/
+├── App.jsx                 # Main application component
+├── firebase.js             # Firebase configuration and auth functions
+└── main.jsx                # Application entry point
+```
+
+## Key Features
+
+1. **User Authentication**
+   - Sign up and login functionality
+   - Protected routes
+   - Session management
+
+2. **Movie Browsing**
+   - Hero banner with featured content
+   - Category-based browsing (Popular, Top Rated, etc.)
+   - Horizontal scrolling movie cards
+
+3. **Video Playback**
+   - YouTube trailer integration
+   - Movie information display
+   - Responsive player interface
+
+4. **Responsive Design**
+   - Works on all screen sizes (including 1024x1366 portrait orientation)
+   - Mobile-friendly navigation
+   - Adaptive layouts
+
+## Research Questions and Key Findings
+
+### Research Questions
+1. How to implement secure user authentication in a React application?
+2. How to efficiently fetch and display large amounts of movie data?
+3. How to create a responsive UI that mimics Netflix's design?
+4. How to integrate external APIs for video content?
+
+### Key Findings
+1. Firebase provides a robust, secure authentication system with minimal setup
+2. The Movie Database (TMDb) API offers comprehensive movie data with reliable performance
+3. React components with Bootstrap enable rapid development of responsive UIs
+4. React Router v7 simplifies navigation and route management in single-page applications
+
+## Screenshots
+
+1. **Login Page** - Clean authentication interface with sign in/up options
+   ![Login Page](screenshot/Screenshot%202025-11-04%20215341.png)
+
+2. **Home Page** - Netflix-style layout with hero banner and movie categories
+   ![Home Page](screenshot/Screenshot%202025-11-04%20215413.png)
+
+3. **Movie Player** - Full-screen video playback with movie information
+   ![Movie Player](screenshot/Screenshot%202025-11-04%20215443.png)
+
+## How to Run the Project
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Installation Steps
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd netfilx-clone-project
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+5. Preview the production build:
+   ```bash
+   npm run preview
+   ```
+
+### Available Scripts
+- `npm run dev` - Starts the development server
+- `npm run build` - Builds the project for production
+- `npm run lint` - Runs ESLint to check for code issues
+- `npm run preview` - Previews the production build locally
+
+The application will be available at `http://localhost:5173` (default Vite port).
