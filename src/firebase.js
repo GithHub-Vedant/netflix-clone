@@ -14,12 +14,12 @@ import { toast } from 'react-toastify';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDDbphh29LLHVyiowZV5VMhxkVbsn4v40Q",
-  authDomain: "netflix-clone-1fff7.firebaseapp.com",
-  projectId: "netflix-clone-1fff7",
-  storageBucket: "netflix-clone-1fff7.firebasestorage.app",
-  messagingSenderId: "328170092311",
-  appId: "1:328170092311:web:a67f6387115e38554f2952"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
@@ -27,38 +27,38 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
-const db= getFirestore(app);
+const db = getFirestore(app);
 
-const signUp= async (name, email, password)=>{
-  try{
+const signUp = async (name, email, password) => {
+  try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    await addDoc(collection(db,"user"),{
+    await addDoc(collection(db, "user"), {
       uid: user.uid,
       name,
-      authProvider:"local",
+      authProvider: "local",
       email,
 
     });
   }
-  catch(error){
+  catch (error) {
     console.log(error);
     toast.error(error.code);
   }
 }
 
-const login = async (email, password)=>{
+const login = async (email, password) => {
   try {
-    await signInWithEmailAndPassword(auth,email,password);
+    await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.log(error);
     toast.error(error.code);
   }
 }
 
-const logout = ()=>{
+const logout = () => {
   signOut(auth);
 }
 
-export {auth, db, login, signUp,logout};
+export { auth, db, login, signUp, logout };
 
