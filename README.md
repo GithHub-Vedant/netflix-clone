@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 
 # Live Dome
 
-link - https://project-netfilxclone-e2750d.netlify.app/login
+link - https://project-netfilxclone-e2750d.netlify.app/
 
 ## Table of Contents
 
