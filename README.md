@@ -2,6 +2,10 @@
 
 A responsive Netflix clone built with React.js and Vite, featuring user authentication, movie browsing, and video playback capabilities.
 
+# Live Demo 
+
+link - https://project-netfilxclone-e2750d.netlify.app/
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Business Problem](#business-problem)
@@ -100,12 +104,15 @@ src/
 ## Screenshots
 
 1. **Login Page** - Clean authentication interface with sign in/up options
+   
    ![Login Page](screenshot/Screenshot%202025-11-04%20215341.png)
 
 2. **Home Page** - Netflix-style layout with hero banner and movie categories
+   
    ![Home Page](screenshot/Screenshot%202025-11-04%20215413.png)
 
 3. **Movie Player** - Full-screen video playback with movie information
+   
    ![Movie Player](screenshot/Screenshot%202025-11-04%20215443.png)
 
 ## How to Run the Project
