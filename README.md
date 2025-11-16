@@ -2,6 +2,10 @@
 
 A responsive Netflix clone built with React.js and Vite, featuring user authentication, movie browsing, and video playback capabilities.
 
+# Live Demo
+
+link - https://project-neflix-clone-0554fa.netlify.app/
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Business Problem](#business-problem)
